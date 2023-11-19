@@ -1,3 +1,4 @@
+#![no_std]
 //! Rust functions for mapping between 1D and 2D space using the Hilbert curve, and its approximations.
 //! 
 //! When working with images and matrices, use the `h2xy_discrete` and `xy2h_discrete` functions:
@@ -44,6 +45,7 @@ hilbert_impl! { "pointer-sized", usize, USIZE_BITS }
 
 pub use crate::usize::{h2xy_discrete, xy2h_discrete};
 use crate::usize::{ORDER_MAX, USIZE_BITS};
+use num_traits::float::FloatCore;
 
 /// Indicates the pattern variant of the Hilbert curve to be constructed.
 ///
